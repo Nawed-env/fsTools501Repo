@@ -4,5 +4,6 @@ public class branckFeatureChanging {
 
 	public void payment() {
 		System.out.println("Payment done!");
+		System.out.println("Payment success!");
 	}
 }

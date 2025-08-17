@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           
+           <!-- Cnfg java file as spring bean -->
+ <bean id="ltime" class="java.time.LocalTime" factory-method="now"/> <!-- dependent  spring bean cnfg-->
+ <bean id="ldate" class="java.time.LocalDate" factory-method="now"/><!-- dependent  spring bean cnfg-->
+
+
+  <bean id="wmg" class="com.nt.sbeans.WishMessageGenerator3"> <!-- Target spring bean cnfg -->
+  
+   <constructor-arg name="time" ref="ltime"/>
+   <constructor-arg name="date" ref="ldate"/>
+   <constructor-arg name="age" value="23"/>
+   <constructor-arg name="email" value="@nawed.com"/>
+  </bean>
+ 
+ 
+ 
+
+          
+</beans>
